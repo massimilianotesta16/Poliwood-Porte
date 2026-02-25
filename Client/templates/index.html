@@ -2,15 +2,8 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poliwood - Home</title>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/Loghi/favicon.png') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% include 'base.html' %}
 </head>
 
 <body>
@@ -49,15 +42,7 @@
                     <div class="slide-image bg-slide-4"></div>
 
                     <div class="hero-content">
-                        <h2>La perfezione<br>dell'abitare contemporaneo</h2>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="slide-image bg-slide-5"></div>
-
-                    <div class="hero-content">
-                        <h2>Tecnica<br>Eleganza<br>Design</h2>
+                        <h2>L'eccellenza<br>dell'abitare contemporaneo</h2>
                     </div>
                 </div>
             </div>
@@ -72,71 +57,105 @@
                     <h3 class="mb-3" style="font-weight: 300; letter-spacing: 2px;">L'ARTE DEL LEGNO MASSELLO</h3>
                     <p class="text-muted lead">
                         Il legno massello conserva l'essenza della materia viva. Le sue venature sono la firma di
-                        un'autentica qualità artigianale,
+                        un'autentica qualità artigianale.
                     </p>
                 </div>
             </div>
         </section>
 
+        <!-- --- -->
         <section class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-md-4 position-relative overflow-hidden group-card">
                     <img src="{{ url_for('static', filename='assets/img/Collezioni/contemporary.jpg') }}" class="w-100"
                         style="height: 500px; object-fit: cover; filter: brightness(0.7);">
-                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                         <h3 class="text-uppercase" style="letter-spacing: 3px;">Contemporary</h3>
-                        <a href="#" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le Collezioni</a>
+                        <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri
+                            le Collezioni</a>
                     </div>
                 </div>
 
                 <div class="col-md-4 position-relative overflow-hidden group-card">
                     <img src="{{ url_for('static', filename='assets/img/Collezioni/classic.jpg') }}" class="w-100"
                         style="height: 500px; object-fit: cover; filter: brightness(0.7);">
-                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                         <h3 class="text-uppercase" style="letter-spacing: 3px;">Classic</h3>
-                        <a href="#" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le Collezioni</a>
+                        <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri
+                            le Collezioni</a>
                     </div>
                 </div>
 
                 <div class="col-md-4 position-relative overflow-hidden group-card">
                     <img src="{{ url_for('static', filename='assets/img/Collezioni/essential.jpg') }}" class="w-100"
                         style="height: 500px; object-fit: cover; filter: brightness(0.7);">
-                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                         <h3 class="text-uppercase" style="letter-spacing: 3px;">Essential</h3>
-                        <a href="#" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le Collezioni</a>
+                        <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri
+                            le Collezioni</a>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- --- -->
         <section class="py-5 bg-light">
             <div class="container py-5">
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <img src="{{ url_for('static', filename='assets/img/Lavorazioni/lavorazione.jpg') }}"
-                            class="img-fluid shadow-lg" alt="Lavorazione Legno">
+                            class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
                     </div>
                     <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="mb-4 text-uppercase" style="font-weight: 300;">Fuori dagli schemi</h2>
+                        <h2 class="mb-4 text-uppercase" style="font-weight: 300;">La Cultura del Legno</h2>
                         <p class="text-muted mb-4">
-                            La tua casa non ha misure standard? Nemmeno noi.
-                            Il nostro punto di forza è la falegnameria interna che ci permette di realizzare qualsiasi
-                            progetto,
-                            dalle porte fuori misura alle boiserie coordinate.
+                            Ogni ambiente ha la sua anima. Selezioniamo <strong>oltre dieci essenze pregiate</strong> —
+                            dal Rovere al
+                            Castagno, fino al Larice Bio — ed <strong>esaltiamo la loro natura</strong> con finiture
+                            speciali e
+                            lavorazioni puramente artigianali, come spazzolature e cerature. Una dedizione assoluta alla
+                            materia prima.
                         </p>
-                        <a href="#" class="text-dark text-decoration-none border-bottom border-dark pb-1">APPROFONDISCI
-                            LA QUALITÀ &rarr;</a>
+                        <a href="{{ url_for('qualita') }}"
+                            class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
+                            style="letter-spacing: 1px; font-size: 0.85rem;">
+                            SCOPRI LA NOSTRA QUALITÀ <span>&rarr;</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
+        <!-- --- -->
+        <section class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                        <h2 class="mb-4 text-uppercase" style="font-weight: 300;">Il nostro Legno, la Vostra Firma</h2>
+                        <p class="text-muted mb-4">
+                            Crediamo che i dettagli facciano la differenza. Per questo vi offriamo la libertà totale di
+                            <strong> reinterpretare le nostre collezioni</strong>: modificate le geometrie, combinate gli stili e date
+                            vita a una porta unica, <strong>cucita sartorialmente sui vostri desideri</strong>. Nessun limite alla
+                            creatività.
+                        </p>
+                        <a href="{{ url_for('personalizzazioni') }}"
+                            class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
+                            style="letter-spacing: 1px; font-size: 0.85rem;">
+                            SCOPRI LE PERSONALIZZAZIONI <span>&rarr;</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='assets/img/Ambientazioni/5.jpg') }}"
+                            class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    {% include 'swiper.html' %}
     {% include 'footer.html' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

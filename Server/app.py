@@ -14,17 +14,25 @@ app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 def home():
     return render_template('index.html')
 
-@app.route('/azienda')
-def azienda():
-    return render_template('azienda.html') 
+@app.route('/chi-siamo')
+def chi_siamo():
+    return render_template('chi-siamo.html')
+
+@app.route('/qualita')
+def qualita():
+    return render_template('qualita.html')
+
+@app.route('/personalizzazioni')
+def personalizzazioni():
+    return render_template('personalizzazioni.html')
 
 @app.route('/collezioni')
 def collezioni():
     return render_template('collezioni.html')
 
-@app.route('/news')
-def news():
-    return render_template('news.html')
+@app.route('/journal')
+def journal():
+    return render_template('journal.html')
 
 @app.route('/contatti')
 def contatti():

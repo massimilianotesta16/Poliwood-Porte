@@ -3,7 +3,7 @@
         <div>
             <div class="navbar-logo">
                 <a href="{{ url_for('home') }}" class="logo-link">
-                    <img src="{{ url_for('static', filename='assets/img/Loghi/logo.png') }}" alt="Logo"style="max-height: 120px;">
+                    <img src="{{ url_for('static', filename='assets/img/Loghi/logo.jpg') }}" alt="Logo"style="max-height: 120px;">
                 </a>
             </div>
 
@@ -15,9 +15,9 @@
                     <div class="dropdown">
                         <a href="#" class="navbar-link">Azienda&nbsp;<i class="bi bi-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="">Chi siamo</a>
-                            <a href="">Qualità</a>
-                            <a href="">Fouri misura standard</a>
+                            <a href="{{ url_for('chi_siamo') }}">Chi siamo</a>
+                            <a href="{{ url_for('qualita') }}">Qualità</a>
+                            <a href="{{ url_for('personalizzazioni') }}">Personalizzazioni</a>
                         </div>
                     </div>
                 </li>
@@ -25,10 +25,10 @@
                     <a href="{{ url_for('collezioni') }}" class="navbar-link">Collezioni</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="{{ url_for('news') }}" class="navbar-link">News</a>
+                    <a href="{{ url_for('contatti') }}" class="navbar-link">Contatti</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="{{ url_for('contatti') }}" class="navbar-link">Contatti</a>
+                    <a href="{{ url_for('journal') }}" class="navbar-link">Journal</a>
                 </li>
             </ul>
         </div>

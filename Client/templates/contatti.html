@@ -2,26 +2,141 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poliwood - Contatti</title>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/Loghi/favicon.png') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% include 'base.html' %}
 </head>
 
 <body>
     {% include 'navbar.html' %}
 
     <main>
+        <!-- --- -->
+        <section class="py-5 text-center container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h3 class="mb-3" style="font-weight: 300; letter-spacing: 2px;">Diamo forma al vostro progetto</h3>
+                    <p class="text-muted lead">
+                        Ogni porta che esce dal nostro laboratorio è un pezzo unico, lavorato a mano. Scriveteci per
+                        parlarci delle vostre esigenze e dei vostri progetti: saremo felici di aiutarvi a realizzarli.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+        <div class="container">
+            <div class="row justify-content-center contatti">
+                <div class="col-md-6 contatti-info">
+
+                    <div>
+                        <h4 class="section-title mb-4">Contatti</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Via Bracco, 2 - 12060 Belvedere Langhe (CN)</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>0173 797050</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-envelope-fill"></i>
+                                <a href="mailto:poliwood@poliwoodporte.com">poliwood@poliwoodporte.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-5">
+                        <h4 class="section-title mb-4">Orari</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="bi bi-clock-fill"></i>
+                                <span>Dal lunedì al venerdì: 9:00 - 17:00</span>
+                            </li>
+                        </ul>
+                        <p
+                            style="color: #666; font-style: italic; font-size: 0.9em; margin-top: -5px; padding-left: 30px; line-height: 1.4;">
+                            Vi invitiamo a contattarci per fissare un incontro:<br>
+                            saremo felici di guidarvi alla scoperta delle nostre lavorazioni.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <input type="text" name="Nome" required>
+                                    <label>Nome</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <input type="text" name="Cognome" required>
+                                    <label>Cognome</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <input type="email" name="Email" required>
+                                    <label>Email</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <input type="text" name="Telefono" required>
+                                    <label>Telefono</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Seleziona il tuo profilo</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio-box">
+                                    <input type="radio" name="tipoUtente" value="Privato" required>
+                                    <label>Privato</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio-box">
+                                    <input type="radio" name="tipoUtente" value="Architetto" required>
+                                    <label>Architetto</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio-box">
+                                    <input type="radio" name="tipoUtente" value="Rivenditore" required>
+                                    <label>Rivenditore</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formbox textarea-box">
+                            <label>Messaggio</label>
+                            <textarea name="Messaggio" required></textarea>
+                        </div>
+
+                        <button type="submit">Invia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="map-section">
+            <h3>Il nostro laboratorio nelle Langhe</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.954593323792!2d7.973855676862686!3d44.49009857107486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d2bd221503bd73%3A0x157b7b9b3b9ad191!2sPoliwood%20Porte%20s.n.c.!5e1!3m2!1sit!2sit!4v1772033488542!5m2!1sit!2sit"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
     </main>
 
     {% include 'footer.html' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

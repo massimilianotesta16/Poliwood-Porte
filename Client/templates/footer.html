@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-6 text-md-start">
-                <img src="{{ url_for('static', filename='assets/img/Loghi/logo.png') }}" alt="Logo" class="footer-logo">
+                <img src="{{ url_for('static', filename='assets/img/Loghi/logo.jpg') }}" alt="Logo" class="footer-logo">
             </div>
             <div class="col-md-6 text-md-end social-icons">
                 <a href="https://www.youtube.com/@poliwoodportesnc/" target="_blank" class="footer-link"><i
@@ -11,59 +11,66 @@
                         class="bi bi-facebook"></i></a>
                 <a href="https://it.pinterest.com/poliwoodportesnc/" target="_blank" class="footer-link"><i
                         class="bi bi-pinterest"></i></a>
+                <a href="https://www.instagram.com/poliwoodportesnc/" target="_blank" class="footer-link"><i
+                        class="bi bi-instagram"></i></a>
             </div>
         </div>
         <hr>
         <div class="row mt-3">
             <div class="col-md-3 text-md-start">
                 <ul>
-                    <li class="footer-pages"><a href="" class="footer-link">Home</a></li>
-                    <li class="footer-pages"><a href="" class="footer-link">Contatti</a></li>
-                    <li class="footer-pages"><a href="" class="footer-link">News</a></li>
+                    <li class="footer-pages"><a href="{{ url_for('home') }}" class="footer-link">Home</a></li>
+                    <li class="footer-pages"><a href="{{ url_for('contatti') }}" class="footer-link">Contatti</a></li>
+                    <li class="footer-pages"><a href="{{ url_for('journal') }}" class="footer-link">Journal</a></li>
                 </ul>
             </div>
             <div class="col-md-3 text-md-start footer-list">
                 <p>Azienda</p>
                 <ul>
-                    <li><a href="{{ url_for('news') }}" class="footer-link">Chi siamo</a></li>
-                    <li><a href="{{ url_for('news') }}" class="footer-link">Qualità</a></li>
-                    <li><a href="{{ url_for('news') }}" class="footer-link">Fuori misura standard</a></li>
+                    <li><a href="{{ url_for('chi_siamo') }}" class="footer-link">Chi siamo</a></li>
+                    <li><a href="{{ url_for('qualita') }}" class="footer-link">Qualità</a></li>
+                    <li><a href="{{ url_for('personalizzazioni') }}" class="footer-link">Personalizzazioni</a></li>
                 </ul>
             </div>
             <div class="col-md-3 text-md-start footer-list">
                 <p><a href="{{ url_for('collezioni') }}" class="footer-link">Collezioni</a></p>
                 <ul>
                     <li><a href="{{ url_for('collezioni') }}" class="footer-link">Next</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Line</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Top</a></li>
                     <li><a href="{{ url_for('collezioni') }}" class="footer-link">Levissima</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Luxury</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Anticate</a></li>
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Top</a></li>
                     <li><a href="{{ url_for('collezioni') }}" class="footer-link">Falegnameria</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Plana</a></li>
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Anticate</a></li>
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Luxury</a></li>
                     <li><a href="{{ url_for('collezioni') }}" class="footer-link">Flat</a></li>
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Line</a></li>
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Plana</a></li>
+
                 </ul>
             </div>
             <div class="col-md-3 text-md-end newsletter">
                 <form>
-                    <div class="newsletter-formbox">
+                    <div class="formbox">
                         <input type="text" name="Nome" required>
                         <label for="Nome">Nome</label>
                     </div>
-                    <div class="newsletter-formbox">
+                    <div class="formbox">
+                        <input type="text" name="Cognome" required>
+                        <label for="Cognome">Cognome</label>
+                    </div>
+                    <div class="formbox">
                         <input type="email" name="Email" required>
                         <label for="Email">Email</label>
                     </div>
-                    <button type="submit">Iscriviti alla newsletter</button>
+                    <button type="submit">Rimaniamo in contatto</button>
                 </form>
             </div>
         </div>
         <div class="mt-5 copyright">
             <p class="text-center mt-3">&copy; 2026
                 Poliwood snc di Negro Stefania & C. - Via Bracco, 2 - 12060 BELVEDERE LANGHE (Cn) - C.F./P.Iva
-                03389190046 Tel. 0173 797050</p>
+                03389190046 Tel. 0173 797050 - mail: poliwood@poliwoodporte.com</p>
             <p class="text-center mt-3">
-                mail: poliwood@poliwoodporte.com - <a>Informativa Privacy</a>
+                <a>Informativa Privacy</a>
                 -&nbsp;<a><span style="color: white; font-size: 15px;"><i class="bi bi-lock-fill"></i></span>&nbsp;Area
                     riservata</a>
             </p>

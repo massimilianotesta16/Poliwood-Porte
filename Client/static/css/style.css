@@ -16,7 +16,18 @@
 body {
     font-family: 'CaviarDreams', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background-color: #F4F5F6;
     color: #333;
+}
+
+::selection {
+    background-color: #d4d4d4; 
+    color: #000000;
+}
+
+::-moz-selection {
+    background-color: #d4d4d4;
+    color: #000000;
 }
 
 /* Navbar */
@@ -136,11 +147,46 @@ body {
 }
 
 .group-card:hover img {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .group-card {
-    overflow: hidden; 
+    overflow: hidden;
+}
+
+.feature-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.animated-link {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.4s ease-in-out;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}
+
+.animated-link span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.animated-link:hover span {
+    transform: translateX(6px);
 }
 
 /*Footer*/
@@ -149,7 +195,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .social-icons i {
@@ -230,41 +276,183 @@ body {
     background-color: #cccccc;
 }
 
-.newsletter-formbox {
+.formbox {
     position: relative;
     min-width: 300px;
     margin-bottom: 20px;
 }
 
-.newsletter-formbox input {
+.formbox input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid;
     outline: none;
     background: transparent;
 }
 
-.newsletter-formbox label {
+.formbox label {
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
     pointer-events: none;
     transition: .5s;
 }
 
-.newsletter-formbox input:focus~label,
-.newsletter-formbox input:valid~label {
+.formbox input:focus~label,
+.formbox input:valid~label {
     top: -20px;
     left: 0;
-    color: #cccccc;
     font-size: 12px;
+}
+
+.newsletter .formbox input {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.newsletter .formbox label {
+    color: #fff;
+}
+
+.newsletter .formbox input:focus~label,
+.newsletter .formbox input:valid~label {
+    color: #cccccc;
+}
+
+/*Contatti*/
+.section-title {
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.contact-list i {
+    font-size: 18px;
+    color: black;
+}
+
+.contact-list a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-list a:hover {
+    opacity: 0.6;
+}
+
+.contatti form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.contatti form button:hover {
+    background-color: #141414;
+}
+
+.contatti-formbox input {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.contatti-formbox label {
+    color: #000;
+}
+
+.contatti-formbox input:focus~label,
+.contatti-formbox input:valid~label {
+    color: #666;
+}
+
+.contatti .radio-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contatti .radio-box input[type="radio"] {
+    cursor: pointer;
+    accent-color: black;
+}
+
+.contatti .radio-box label {
+    cursor: pointer;
+}
+
+.textarea-box textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: inherit;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.textarea-box label {
+    position: static;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.map-section {
+    width: 100%;
+    height: 280px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(100%) contrast(95%) brightness(90%);
+    transition: filter 0.4s ease;
+}
+
+.map-section iframe:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.map-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    pointer-events: none;
 }
 
 /* Hero Section */
@@ -321,16 +509,13 @@ body {
 .bg-slide-2 {
     background-image: url('../assets/img/Ambientazioni/2.jpg');
 }
+
 .bg-slide-3 {
     background-image: url('../assets/img/Ambientazioni/3.jpg');
 }
 
 .bg-slide-4 {
     background-image: url('../assets/img/Ambientazioni/4.jpg');
-}
-
-.bg-slide-5 {
-    background-image: url('../assets/img/Ambientazioni/5.jpg');
 }
 
 .slide-image {
@@ -351,7 +536,7 @@ body {
     text-align: center;
     width: 100%;
     color: white;
-    text-shadow: 0 2px 10px rgba(0,0,0,1.5); 
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 1.5);
 }
 
 .hero-content h2 {
