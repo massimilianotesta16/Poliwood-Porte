@@ -1,14 +1,14 @@
 import os
 from flask import Flask, render_template, url_for
 
-# 1. Configurazione dei percorsi
+# Configurazione dei percorsi
 basedir = os.path.abspath(os.path.dirname(__file__))
 template_dir = os.path.join(basedir, '../Client/templates')
 static_dir = os.path.join(basedir, '../Client/static')
 
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
-# 2. Rotte
+# Rotte
 
 @app.route('/')
 def home():
@@ -38,7 +38,7 @@ def journal():
 def contatti():
     return render_template('contatti.html')
 
-# 3. Avvio dell'applicazione
+# Avvio dell'applicazione
 
 if __name__ == '__main__':
     app.run(debug=True)
