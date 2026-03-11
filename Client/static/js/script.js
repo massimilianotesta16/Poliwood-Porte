@@ -1,14 +1,33 @@
 //Hero Section
 var heroSwiper = new Swiper(".heroSwiper", {
-    effect: "fade",       // Dissolvenza invece di scorrimento (MOLTO più elegante)
+    effect: "fade",
     fadeEffect: {
-        crossFade: true   // Evita che si veda lo sfondo bianco durante il cambio
+        crossFade: true 
     },
-    speed: 1500,          // La dissolvenza dura 1.5 secondi (morbida)
+    speed: 1500,
     autoplay: {
-        delay: 5000,      // Cambia immagine ogni 5 secondi
+        delay: 5000,
         disableOnInteraction: false,
     },
 
     loop: true,
 });
+
+function animateText(row) {
+    const elementi = document.querySelectorAll(row);
+    
+    elementi.forEach(elemento => {
+        const testo = elemento.innerText;
+        elemento.innerHTML = ''; 
+
+        testo.split('').forEach((lettera, indice) => {
+            const span = document.createElement('span');
+            span.innerHTML = lettera === ' ' ? '&nbsp;' : lettera; 
+            span.style.animationDelay = `${indice * 0.04}s`; 
+            elemento.appendChild(span);
+        });
+    });
+}
+
+animateText('.up-row');
+animateText('.down-row');

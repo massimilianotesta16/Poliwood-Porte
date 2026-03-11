@@ -97,29 +97,33 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-md-12">
-                                <p>Seleziona il tuo profilo</p>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio-box">
-                                    <input type="radio" name="tipoUtente" value="Privato" required>
-                                    <label>Privato</label>
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <select name="tipoUtente" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="Privato">Privato</option>
+                                        <option value="Architetto">Architetto</option>
+                                        <option value="Rivenditore">Rivenditore</option>
+                                    </select>
+                                    <label>Seleziona il tuo profilo</label>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="radio-box">
-                                    <input type="radio" name="tipoUtente" value="Architetto" required>
-                                    <label>Architetto</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio-box">
-                                    <input type="radio" name="tipoUtente" value="Rivenditore" required>
-                                    <label>Rivenditore</label>
+
+                            <div class="col-md-6">
+                                <div class="formbox">
+                                    <select name="tipoRichiesta" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="Informazione">Informazione</option>
+                                        <option value="Preventivo">Preventivo</option>
+                                        <option value="Collaborazione">Collaborazione</option>
+                                    </select>
+                                    <label>Tipologia di richiesta</label>
                                 </div>
                             </div>
                         </div>
+
                         <div class="formbox textarea-box">
                             <label>Messaggio</label>
                             <textarea name="Messaggio" required></textarea>

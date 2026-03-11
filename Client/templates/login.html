@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <title>Poliwood - Login</title>
+    {% include 'base.html' %}
+</head>
+
+<body class="login-body">
+    <div class="login-wrapper">
+            <div class="login-logo">
+        <img src="{{ url_for('static', filename='assets/img/Loghi/logo.jpg') }}" alt="Logo" style="max-height: 120px;">
+    </div>
+    <div class="login-box">
+        <div class="login-header">
+            <h2>Area Riservata</h2>
+        </div>
+
+        {% if error %}
+        <p style="color: #d9534f; font-size: 14px; margin-bottom: 15px;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" action="/login">
+            <div class="formbox">
+                <input type="text" name="username" required placeholder=" ">
+                <label>Username</label>
+            </div>
+            <div class="formbox">
+                <input type="password" name="password" required placeholder=" ">
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn-login">Accedi</button>
+        </form>
+
+        <div class="login-footer">
+            <a href="{{ url_for('home') }}">← Torna al sito Poliwood</a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

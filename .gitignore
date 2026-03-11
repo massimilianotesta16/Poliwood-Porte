@@ -1,0 +1,16 @@
+# --- CHIAVI SEGRETE E PASSWORD ---
+.env
+
+# --- DATABASE ---
+*.db
+*.sqlite3
+instance/
+
+# --- AMBIENTE VIRTUALE PYTHON ---
+venv/
+.venv/
+env/
+
+# --- FILE TEMPORANEI DI PYTHON ---
+__pycache__/
+*.pyc

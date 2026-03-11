@@ -19,7 +19,8 @@
                     <div class="slide-image bg-slide-1"></div>
 
                     <div class="hero-content">
-                        <h2>Regalatevi un ambiente<br>degno di voi</h2>
+                        <span class="up-row">Regalatevi un ambiente</span>
+                        <span class="down-row">degno di voi</span>
                     </div>
                 </div>
 
@@ -27,7 +28,8 @@
                     <div class="slide-image bg-slide-2"></div>
 
                     <div class="hero-content">
-                        <h2>Dove la fantasia non osava,<br>l'esperienza e la tecnica creano</h2>
+                        <span class="up-row">Dove la fantasia non osava,</span>
+                        <span class="down-row">l'esperienza e la tecnica creano</span>
                     </div>
                 </div>
 
@@ -35,7 +37,8 @@
                     <div class="slide-image bg-slide-3"></div>
 
                     <div class="hero-content">
-                        <h2>La perfetta armonia<br>tra forme, colore e artigianato</h2>
+                        <span class="up-row">L'eccellenza</span>
+                        <span class="down-row">dell'abitare contemporaneo</span>
                     </div>
                 </div>
 
@@ -43,7 +46,8 @@
                     <div class="slide-image bg-slide-4"></div>
 
                     <div class="hero-content">
-                        <h2>L'eccellenza<br>dell'abitare contemporaneo</h2>
+                        <span class="up-row">La perfetta armonia</span>
+                        <span class="down-row">tra forme, colore e artigianato</span>
                     </div>
                 </div>
             </div>
@@ -68,7 +72,7 @@
         <section class="container-fluid px-0 row gx-0">
             <div class="col-md-4 position-relative group-card">
                 <img src="{{ url_for('static', filename='assets/img/Collezioni/contemporary.jpg') }}"
-                    class="w-100 category-img">
+                    class="w-100 category-img img-contemporary">
                 <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                     <h3 class="text-uppercase tracking-wide">Contemporary</h3>
                     <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le
@@ -78,7 +82,7 @@
 
             <div class="col-md-4 position-relative group-card">
                 <img src="{{ url_for('static', filename='assets/img/Collezioni/classic.jpg') }}"
-                    class="w-100 category-img">
+                    class="w-100 category-img img-classic">
                 <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                     <h3 class="text-uppercase tracking-wide">Classic</h3>
                     <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le
@@ -88,7 +92,7 @@
 
             <div class="col-md-4 position-relative group-card">
                 <img src="{{ url_for('static', filename='assets/img/Collezioni/essential.jpg') }}"
-                    class="w-100 category-img">
+                    class="w-100 category-img img-essential">
                 <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3">
                     <h3 class="text-uppercase tracking-wide">Essential</h3>
                     <a href="{{ url_for('collezioni') }}" class="btn btn-outline-light mt-3 rounded-0 px-4">Scopri le
@@ -100,60 +104,67 @@
         </section>
 
         <!-- Qualità -->
-        <section class="py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='assets/img/Lavorazioni/lavorazione.jpg') }}"
-                            class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
-                    </div>
-                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="section-title mb-4 text-uppercase">La Cultura del Legno</h2>
-                        <p class="text-paragrafo mb-4">
-                            Ogni ambiente ha la sua anima. Selezioniamo <strong>oltre dieci essenze pregiate</strong> —
-                            dal Rovere al
-                            Castagno, fino al Larice Bio — ed <strong>esaltiamo la loro natura</strong> con finiture
-                            speciali e
-                            lavorazioni puramente artigianali, come spazzolature e cerature. Una dedizione assoluta alla
-                            materia prima.
-                        </p>
-                        <a href="{{ url_for('qualita') }}"
-                            class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
-                            style="letter-spacing: 1px; font-size: 0.85rem;">
-                            SCOPRI LA NOSTRA QUALITÀ <span>&rarr;</span>
-                        </a>
+        <div class="container-fluid px-5">
+            <section class="py-5">
+                <div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='assets/img/Altre/lavorazione.jpg') }}"
+                                class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
+                        </div>
+                        <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                            <h2 class="section-title mb-4 text-uppercase">La Cultura del Legno</h2>
+                            <p class="text-paragrafo mb-4">
+                                Ogni ambiente ha la sua anima. Selezioniamo <strong>oltre dieci essenze
+                                    pregiate</strong> —
+                                dal Rovere al
+                                Castagno, fino al Larice Bio — ed <strong>esaltiamo la loro natura</strong> con finiture
+                                speciali e
+                                lavorazioni puramente artigianali, come spazzolature e cerature. Una dedizione assoluta
+                                alla
+                                materia prima.
+                            </p>
+                            <a href="{{ url_for('qualita') }}"
+                                class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
+                                style="letter-spacing: 1px; font-size: 0.85rem;">
+                                SCOPRI LA NOSTRA QUALITÀ <span>&rarr;</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Personalizzazioni -->
-        <section class="py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="section-title mb-4 text-uppercase">Il nostro Legno, la Vostra Firma</h2>
-                        <p class="text-paragrafo mb-4">
-                            Crediamo che i dettagli facciano la differenza. Per questo vi offriamo la libertà totale di
-                            <strong> reinterpretare le nostre collezioni</strong>: modificate le geometrie, combinate
-                            gli stili e date
-                            vita a una porta unica, <strong>cucita sartorialmente sui vostri desideri</strong>. Nessun
-                            limite alla
-                            creatività.
-                        </p>
-                        <a href="{{ url_for('personalizzazioni') }}"
-                            class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
-                            style="letter-spacing: 1px; font-size: 0.85rem;">
-                            SCOPRI LE PERSONALIZZAZIONI <span>&rarr;</span>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='assets/img/Ambientazioni/5.jpg') }}"
-                            class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
+            <!-- Personalizzazioni -->
+            <section class="py-5">
+                <div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                            <h2 class="section-title mb-4 text-uppercase">Il nostro Legno, la Vostra Firma</h2>
+                            <p class="text-paragrafo mb-4">
+                                Crediamo che i dettagli facciano la differenza. Per questo vi offriamo la libertà totale
+                                di
+                                <strong> reinterpretare le nostre collezioni</strong>: modificate le geometrie,
+                                combinate
+                                gli stili e date
+                                vita a una porta unica, <strong>cucita sartorialmente sui vostri desideri</strong>.
+                                Nessun
+                                limite alla
+                                creatività.
+                            </p>
+                            <a href="{{ url_for('personalizzazioni') }}"
+                                class="text-dark text-decoration-none animated-link pb-1 fw-bold text-uppercase"
+                                style="letter-spacing: 1px; font-size: 0.85rem;">
+                                SCOPRI LE PERSONALIZZAZIONI <span>&rarr;</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='assets/img/Ambientazioni/5.jpg') }}"
+                                class="img-fluid shadow-lg feature-img" alt="Lavorazione Legno">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
     </main>
     {% include 'swiper.html' %}

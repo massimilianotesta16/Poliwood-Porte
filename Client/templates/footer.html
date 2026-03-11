@@ -35,16 +35,15 @@
             <div class="col-md-3 text-md-start footer-list">
                 <p><a href="{{ url_for('collezioni') }}" class="footer-link">Collezioni</a></p>
                 <ul>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Next</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Levissima</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Top</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Falegnameria</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Anticate</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Luxury</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Flat</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Line</a></li>
-                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Plana</a></li>
-
+                    <li><a href="{{ url_for('collezioni') }}" class="footer-link">Tutte le collezioni</a></li>
+                    {% for collezione in collezioni %}
+                    <li>
+                        <a href="{{ url_for('collezione', collezione_id=collezione.id_collezione) }}"
+                            class="footer-link">
+                            {{ collezione.nome_collezione }}
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-md-3 text-md-end newsletter">
@@ -71,7 +70,8 @@
                 03389190046 Tel. 0173 797050 - mail: poliwood@poliwoodporte.com</p>
             <p class="text-center mt-3">
                 <a>Informativa Privacy</a>
-                -&nbsp;<a><span style="color: white; font-size: 15px;"><i class="bi bi-lock-fill"></i></span>&nbsp;Area
+                -&nbsp;<a href="{{ url_for('login') }}"><span style="color: white; font-size: 15px;"><i
+                            class="bi bi-lock-fill"></i></span>&nbsp;Area
                     riservata</a>
             </p>
         </div>

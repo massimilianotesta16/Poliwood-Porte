@@ -9,74 +9,85 @@
 <body>
     {% include 'navbar.html' %}
 
+
+
     <main>
-        <!-- --- -->
-        <section class="py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='assets/img/no_image.png') }}"
-                            class="img-fluid shadow-lg feature-img" alt="no_image">
-                    </div>
-                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="section-title mb-4 text-uppercase">Materia Viva e Inimitabile</h2>
-                        <p class="text-paragrafo mb-4">
-                            Una porta in legno massello non è un semplice elemento d'arredo, ma una materia viva che
-                            respira e acquista fascino con il passare degli anni. Le leggere sfumature di colore e
-                            l'evoluzione naturale della fibra nel tempo non sono difetti, ma il segno inconfondibile di
-                            un pezzo unico e irripetibile, testimonianza visiva della forza e della longevità di questo
-                            materiale.
-                        </p>
-                    </div>
+        <div class="container-fluid px-5 mt-5">
+            <div class="row pb-5">
+                <div class="col-lg-8">
+                    <h1 class="display-1 fw-bold mb-0" style="letter-spacing: -3px; line-height: 0.9;">MASSELLO<br><span
+                            class="text-muted">ITALIANO</span></h1>
+                </div>
+                <div class="col-lg-4 d-flex align-items-end">
+                    <p class="lead text-uppercase fw-light mb-2" style="letter-spacing: 3px; font-size: 0.8rem;">
+                        Eccellenza Artigianale / Materia Viva / Durata Eterna
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="row g-0 align-items-stretch">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='assets/img/Altre/qualita_1.jpg') }}"
+                    class="img-fluid feature-img" alt="Materia Viva e Inimitabile">
+            </div>
+            <div class="col-md-6 d-flex align-items-center border-top border-dark">
+                <div class="p-lg-5">
+                    <h2 class="section-title mb-4 text-uppercase">Materia Viva e Inimitabile</h2>
+                    <p class="text-paragrafo mb-4">
+                        Una porta in legno massello non è un semplice elemento d'arredo, ma una materia viva che respira
+                        e acquista fascino con il passare degli anni. Le leggere sfumature di colore e l'evoluzione
+                        naturale della fibra nel tempo non sono difetti, ma il segno inconfondibile di un pezzo unico e
+                        irripetibile, testimonianza visiva della forza e della longevità di questo materiale.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- --- -->
-        <section class="py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="section-title mb-4 text-uppercase">Una Scelta Senza Paragoni</h2>
-                        <p class="text-paragrafo mb-4">
-                            Mentre il mercato standard si limita a proporre tre o quattro varianti di legno, noi abbiamo
-                            scelto di offrire ai nostri clienti un orizzonte molto più ampio. Oltre ai grandi classici,
-                            lavoriamo Ciliegio, Faggio, Pino, Toulipier, Satinè e Lightwood. E se il vostro progetto
-                            richiede essenze particolari non presenti a listino — come Abete o Frassino — possiamo
-                            ricercarle e lavorarle su richiesta.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='assets/img/no_image.png') }}"
-                            class="img-fluid shadow-lg feature-img" alt="no_image">
-                    </div>
+        <section class="row g-0 align-items-stretch">
+            <div class="col-md-6 order-md-2">
+                <img src="{{ url_for('static', filename='assets/img/Altre/qualita_2.jpg') }}"
+                    class="img-fluid feature-img" alt="Legni pregiati">
+            </div>
+            <div class="col-md-6 order-md-1 d-flex align-items-center">
+                <div class="p-lg-5">
+                    <h2 class="section-title mb-4 text-uppercase">Una Scelta Senza Paragoni</h2>
+                    <p class="text-paragrafo mb-4">
+                        Mentre il mercato standard si limita a proporre tre o quattro varianti di legno, noi abbiamo
+                        scelto di offrire ai nostri clienti un orizzonte molto più ampio. Oltre ai grandi classici,
+                        lavoriamo Ciliegio, Faggio, Pino, Toulipier, Satinè e Lightwood. E se il vostro progetto
+                        richiede essenze particolari non presenti a listino — come Abete o Frassino — possiamo
+                        ricercarle e lavorarle su richiesta.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- --- -->
-        <section class="py-5">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='assets/img/no_image.png') }}"
-                            class="img-fluid shadow-lg feature-img" alt="no_image">
-                    </div>
-                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                        <h2 class="section-title mb-4 text-uppercase">Precisione Tecnica e Finiture Manuali</h2>
-                        <p class="text-paragrafo mb-4">
-                            La nostra produzione è il risultato di un equilibrio perfetto: utilizziamo tecnologie
-                            avanzate per la massima precisione nel taglio e nel trattamento del tavolame, ma affidiamo
-                            le fasi cruciali alle mani dei nostri artigiani. Ogni porta viene rifinita a mano con amore
-                            e rispetto per la naturalezza del legno. Oltre alle classiche verniciature, realizziamo
-                            lavorazioni tattili ricercate come l'effetto grezzo, per chi desidera sentire sotto i
-                            polpastrelli la vera consistenza della materia.
-                        </p>
-                    </div>
+        <section class="row g-0 align-items-stretch">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='assets/img/no_image.png') }}" class="img-fluid feature-img"
+                    alt="no_image">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="p-lg-5">
+                    <h2 class="section-title mb-4 text-uppercase">Precisione Tecnica e Finiture Manuali</h2>
+                    <p class="text-paragrafo mb-4">
+                        La nostra produzione è il risultato di un equilibrio perfetto: utilizziamo tecnologie avanzate
+                        per la massima precisione nel taglio e nel trattamento del tavolame, ma affidiamo le fasi
+                        cruciali alle mani dei nostri artigiani. Ogni porta viene rifinita a mano con amore e rispetto
+                        per la naturalezza del legno. Oltre alle classiche verniciature, realizziamo lavorazioni tattili
+                        ricercate come l'effetto grezzo, per chi desidera sentire sotto i polpastrelli la vera
+                        consistenza della materia.
+                    </p>
                 </div>
             </div>
         </section>
+        <div class="container-fluid px-5 py-3 text-end">
+        <span class="text-uppercase" style="font-size: 0.8rem; letter-spacing: 4px;">Firmata Poliwood</span>
+    </div>
+
     </main>
+
 
     {% include 'footer.html' %}
 </body>
